@@ -4,7 +4,6 @@ namespace addressbook
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to adress book app!");
@@ -13,6 +12,10 @@ namespace addressbook
             Console.WriteLine("2. Remove number");
             Console.WriteLine("3. Check a number");
             Console.WriteLine("Check 1, 2 or 3...");
+
+            string choice = Console.ReadLine();
+        
+            Console.WriteLine("You have chosen option number:"+choice);
         }
 
     }
