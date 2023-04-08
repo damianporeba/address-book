@@ -16,6 +16,16 @@ namespace addressbook
             string choice = Console.ReadLine();
         
             Console.WriteLine("You have chosen option number:"+choice);
+
+            int choosenOption = 0;
+
+            Int32.TryParse(choice, out choosenOption);
+            Console.WriteLine("Please, choose another number...");
+
+            choice = Console.ReadLine();
+
+            Int32.TryParse(choice, out choosenOption);
+            
         }
 
     }
