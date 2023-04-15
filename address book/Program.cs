@@ -34,8 +34,26 @@ namespace addressbook
 
             ItemType chosenCategory; 
 
-            Int32.TryParse(choice, out choosenOption);
-            
+            Enum.TryParse(category, out chosenCategory);
+
+
+
+            if (chosenOperation == 1)
+            {
+                Item item = new Item() { Id = 1, Name = "Kontakt" };
+                Console.WriteLine("Wybrałeś opcję dodania kontaktu");
+            }
+
+            else if (chosenOperation == 2)
+            {
+                Console.WriteLine("Wybrałeś opcję usuwania kontaktu");
+            }
+
+            else
+            {
+                Console.WriteLine("Wybrałeś opcję wybrania kontaktu");
+            }
+
         }
 
     }
