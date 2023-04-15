@@ -1,4 +1,5 @@
-﻿using System;
+﻿using address_book;
+using System;
 
 namespace addressbook
 {
@@ -13,16 +14,25 @@ namespace addressbook
             Console.WriteLine("3. Check a number");
             Console.WriteLine("Check 1, 2 or 3...");
 
-            string choice = Console.ReadLine();
+            string operation = Console.ReadLine();
         
-            Console.WriteLine("You have chosen option number:"+choice);
+            Console.WriteLine("You have chosen option number:"+operation);
 
-            int choosenOption = 0;
+            int chosenOperation = 0;
 
-            Int32.TryParse(choice, out choosenOption);
-            Console.WriteLine("Please, choose another number...");
+            Int32.TryParse(operation, out chosenOperation);
+            
+            
+            
+            Console.WriteLine("Please, select item category");
+            Console.WriteLine("1. Default");
+            Console.WriteLine("2. Family");
+            Console.WriteLine("3. Friend");
+            Console.WriteLine("4. Other");
 
-            choice = Console.ReadLine();
+            string category = Console.ReadLine();
+
+            ItemType chosenCategory; 
 
             Int32.TryParse(choice, out choosenOption);
             

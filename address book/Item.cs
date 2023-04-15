@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace address_book
 {
-    internal class Item
-    {
-    }
+
+        public enum ItemType
+        {
+            Default = 1,
+            Family = 2,
+            Friend = 3,
+            Other = 4,
+        }
 }
