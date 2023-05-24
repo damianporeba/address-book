@@ -10,7 +10,7 @@ namespace addressbook
             MenuService menuService = new MenuService();
             menuService = Initialize(menuService);
 
-            Console.WriteLine("witaj w aplikacji AdressBook!");
+            Console.WriteLine("Witaj w aplikacji AdressBook!");
            
 
             while (true)
