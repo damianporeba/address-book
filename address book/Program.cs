@@ -22,9 +22,9 @@ namespace addressbook
                     Console.WriteLine($"{mainMenu[i].MenuId}. {mainMenu[i].MenuName}");
                 }
 
-                Console.ReadLine();
-
-            }
+            string choice = Console.ReadLine();
+        
+            Console.WriteLine("You have chosen option number:"+choice);
         }
 
         private static MenuService Initialize(MenuService menuService)
