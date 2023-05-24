@@ -1,4 +1,5 @@
-﻿using System;
+﻿using address_book;
+using System;
 
 namespace addressbook
 {
@@ -6,17 +7,33 @@ namespace addressbook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to adress book app!");
-            Console.WriteLine("Please let me know what do you want do:");
-            Console.WriteLine("1. Add a new number");
-            Console.WriteLine("2. Remove number");
-            Console.WriteLine("3. Check a number");
-            Console.WriteLine("Check 1, 2 or 3...");
+            MenuService menuService = new MenuService();
+            menuService = Initialize(menuService);
 
-            string choice = Console.ReadLine();
-        
-            Console.WriteLine("You have chosen option number:"+choice);
+            Console.WriteLine("witaj w aplikacji AdressBook!");
+           
+
+            while (true)
+            {
+                Console.WriteLine("Wybierz numer akcji którą chcesz wykonać:");
+                var mainMenu = menuService.GetMenuActionsByMenuType("Main");
+                for (int i = 0; i < mainMenu.Count; i++)
+                {
+                    Console.WriteLine($"{mainMenu[i].MenuId}. {mainMenu[i].MenuName}");
+                }
+
+                Console.ReadLine();
+
+            }
         }
 
+        private static MenuService Initialize(MenuService menuService)
+        {
+            menuService.AddNewAction(1, "Dodaj numer", "Main");
+            menuService.AddNewAction(2, "Usuń numer", "Main");
+            menuService.AddNewAction(3, "Pokaż szczegóły numeru", "Main");
+            menuService.AddNewAction(4, "Lista numerów", "Main");
+            return menuService;
+        }
     }
 }
