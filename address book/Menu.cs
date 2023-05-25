@@ -19,7 +19,7 @@ namespace address_book
             MenuId = menuId;
         }
 
-        public Menu(string menuName, int menuId)
+        public Menu (string menuName, int menuId)
         {
             MenuName = menuName;
             MenuId = menuId;
